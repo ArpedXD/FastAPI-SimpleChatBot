@@ -30,7 +30,9 @@ class Account_System:
         response.set_cookie(
             key="session_id",
             value=session_id,
-            httponly=True
+            httponly=True,
+            secure=True,
+            samesite="none"
         )
 
         return response
