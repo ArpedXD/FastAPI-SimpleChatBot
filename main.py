@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
         )
 
         if app.state.db.is_connected():
-            print("success")
+            print("ssuccess")
             
     except mysql.connector.Error as e:
         print(e)
@@ -36,7 +36,7 @@ app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://arpedxd.github.io", "http://127.0.0.1:5500"],
+    allow_origins=["http://127.0.0.1:5500"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
