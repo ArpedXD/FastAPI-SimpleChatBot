@@ -24,6 +24,7 @@ class Account_System:
                 "logged_in" : True
             })
         
+        print("setCookied")
         response = Response(content=value_to_return)
 
         response.set_cookie(
